@@ -1,0 +1,28 @@
+% Archivo: tikz/brecha_anomica.tex
+\begin{tikzpicture}[
+    >={Stealth[scale=1.2]}, 
+    font=\scriptsize
+]
+
+    % Ejes
+    \draw[->, thick] (0,0) -- (7,0) node[right] {Tiempo ($t$)};
+    \draw[->, thick] (0,0) -- (0,5.5) node[above] {Magnitud};
+
+    % Curva P: Posibilidad material (crecimiento lineal lento o finita)
+    \draw[ultra thick, gray!80, domain=0:6.5] plot (\x, {1 + 0.3*\x}) node[right] {$\VarPos$ (Posibilidades)};
+
+    % Curva D: Deseo / Expectativa cultural (crecimiento exponencial)
+    \draw[ultra thick, black, domain=0:6.5] plot (\x, {1 * exp(0.25*\x)}) node[right] {$\VarDes$ (Deseo infinito)};
+
+    % Área de Anomia sombreada
+    \fill[gray!20, opacity=0.6] (0,1) -- plot[domain=0:6.5] (\x, {1 * exp(0.25*\x)}) -- (6.5, {1+0.3*6.5}) -- plot[domain=6.5:0] (\x, {1 + 0.3*\x}) -- cycle;
+
+    % Etiquetas de la zona de entropía
+    \node[font=\small, align=center] at (5, 2.5) {$\VarAno \to \infty$};
+    \node[font=\tiny, align=center] at (5, 2.0) {(Anomia)};
+
+    % Nota fenomenológica
+    \node[draw, dotted, align=left, text width=4cm, fill=white] at (2.5, 4) 
+    {\footnotesize La \ActitudBlase{} intenta bloquear este diferencial.};
+
+\end{tikzpicture}

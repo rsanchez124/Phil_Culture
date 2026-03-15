@@ -1,0 +1,30 @@
+﻿% Archivo: tikz/semana04/asintota_weber.tex
+\usetikzlibrary{decorations.pathreplacing}
+\begin{tikzpicture}[
+    >={Stealth[scale=1.2]}, 
+    font=\scriptsize
+]
+
+    % Ejes
+    \draw[->, thick] (0,0) -- (7,0) node[right] {$\VarRac$ (Nivel de Racionalización)};
+    \draw[->, thick] (0,0) -- (0,5.5) node[above] {Magnitud};
+
+    % Curva E: Eficiencia técnica (crecimiento asintótico/logarítmico)
+    \draw[ultra thick, gray!80, domain=0.5:6.5] plot (\x, {4.5 - 4*exp(-0.7*\x)}) node[right, align=left] {$\VarEfi$\\Eficiencia};
+
+    % Curva M: Sentido / Espíritu (decaimiento hiperbólico 1/R)
+    \draw[ultra thick, black, domain=0.6:6.5] plot (\x, {2.5/\x}) node[above, align=left] {$\VarMen$\\Sentido};
+
+    % Punto Crítico de Intersección
+    % Aprox donde 4.5 - 4*exp(-0.7*x) = 2.5/x -> x ~ 1.25, y ~ 2.0
+    \coordinate (Inter) at (1.25, 2.0);
+    \filldraw[black] (Inter) circle (2.5pt);
+
+    % Etiquetas y flechas
+    \draw[->, dashed] (2.5, 5.0) -- (Inter);
+    \node[align=center, draw, fill=white] at (3.5, 5.0) {\textbf{Punto de Cisma}\\Nace el \enquote{especialista sin espíritu}};
+
+    % Zona de la Jaula de Hierro
+    \draw[decorate, decoration={brace, amplitude=5pt}, thick] (6.5, 4.3) -- (6.5, 0.4) node[midway, right=0.2cm, align=left, font=\bfseries] {\JaulaDeHierro};
+
+\end{tikzpicture}

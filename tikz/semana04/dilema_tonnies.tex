@@ -1,0 +1,30 @@
+% Archivo: tikz/dilema_tonnies.tex
+\begin{tikzpicture}[
+    >={Stealth[scale=1.2]}, 
+    font=\scriptsize,
+    node distance=2.5cm
+]
+
+    % Ejes del plano cartesiano
+    \draw[->, thick] (0,0) -- (7,0) node[right, align=center] {$\VarSeg$\\Seguridad Ontológica};
+    \draw[->, thick] (0,0) -- (0,5.5) node[above, align=center] {$\VarLib$\\Libertad Individual};
+
+    % Curva hiperbólica L * S = k
+    \draw[ultra thick, domain=0.8:6.5, samples=100] plot (\x, {4/\x});
+
+    % Ecuación central
+    \node[font=\normalsize, fill=white, inner sep=2pt] at (3.5, 3.0) {$\VarLib \cdot \VarSeg = \ConstCoh$};
+
+    % Punto 1: Gesellschaft (Alto L, Bajo S)
+    \filldraw (1, 4) circle (2.5pt);
+    \node[right=0.2cm, align=left] at (1, 4) {\textbf{\Gesellschaft{}} (Hotel)\\Anonimato y fungibilidad};
+    \draw[dashed, gray] (1,0) -- (1,4) node[below=4cm, text=black] {\footnotesize Bajo $S$};
+    \draw[dashed, gray] (0,4) -- (1,4) node[left=1cm, text=black] {\footnotesize Alto $L$};
+
+    % Punto 2: Gemeinschaft (Bajo L, Alto S)
+    \filldraw (5.5, 0.72) circle (2.5pt);
+    \node[above right, align=left] at (5.5, 0.72) {\textbf{\Gemeinschaft{}} (Aldea)\\Red de sangre y tiranía};
+    \draw[dashed, gray] (5.5,0) -- (5.5,0.72) node[below=0.72cm, text=black] {\footnotesize Alto $S$};
+    \draw[dashed, gray] (0,0.72) -- (5.5,0.72) node[left=5.5cm, text=black] {\footnotesize Bajo $L$};
+
+\end{tikzpicture}
