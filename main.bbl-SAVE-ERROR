@@ -1,0 +1,187 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{aristotle_posterior_analytics}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8d4a39cc0631ad0afeb3c94c8090287d}{%
+           family={Aristóteles},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Madrid}%
+      }
+      \list{publisher}{1}{%
+        {Gredos}%
+      }
+      \strng{namehash}{8d4a39cc0631ad0afeb3c94c8090287d}
+      \strng{fullhash}{8d4a39cc0631ad0afeb3c94c8090287d}
+      \strng{fullhashraw}{8d4a39cc0631ad0afeb3c94c8090287d}
+      \strng{bibnamehash}{8d4a39cc0631ad0afeb3c94c8090287d}
+      \strng{authorbibnamehash}{8d4a39cc0631ad0afeb3c94c8090287d}
+      \strng{authornamehash}{8d4a39cc0631ad0afeb3c94c8090287d}
+      \strng{authorfullhash}{8d4a39cc0631ad0afeb3c94c8090287d}
+      \strng{authorfullhashraw}{8d4a39cc0631ad0afeb3c94c8090287d}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Segundos Analíticos}
+      \field{year}{2008}
+      \true{nocite}
+    \endentry
+    \entry{descartes_meditaciones}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9f046e68c5b38bcc80be3d2cc6f58dd6}{%
+           family={Descartes},
+           familyi={D\bibinitperiod},
+           given={René},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Madrid}%
+      }
+      \list{publisher}{1}{%
+        {Alianza}%
+      }
+      \strng{namehash}{9f046e68c5b38bcc80be3d2cc6f58dd6}
+      \strng{fullhash}{9f046e68c5b38bcc80be3d2cc6f58dd6}
+      \strng{fullhashraw}{9f046e68c5b38bcc80be3d2cc6f58dd6}
+      \strng{bibnamehash}{9f046e68c5b38bcc80be3d2cc6f58dd6}
+      \strng{authorbibnamehash}{9f046e68c5b38bcc80be3d2cc6f58dd6}
+      \strng{authornamehash}{9f046e68c5b38bcc80be3d2cc6f58dd6}
+      \strng{authorfullhash}{9f046e68c5b38bcc80be3d2cc6f58dd6}
+      \strng{authorfullhashraw}{9f046e68c5b38bcc80be3d2cc6f58dd6}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Meditaciones metafísicas}
+      \field{year}{2005}
+      \true{nocite}
+    \endentry
+    \entry{augustine_civitate}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2e4e4e1c66ceee0ecf8ba9abf84d46dd}{%
+           family={Hipona},
+           familyi={H\bibinitperiod},
+           given={Agustín},
+           giveni={A\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+      }
+      \list{location}{1}{%
+        {Madrid}%
+      }
+      \list{publisher}{1}{%
+        {BAC}%
+      }
+      \strng{namehash}{2e4e4e1c66ceee0ecf8ba9abf84d46dd}
+      \strng{fullhash}{2e4e4e1c66ceee0ecf8ba9abf84d46dd}
+      \strng{fullhashraw}{2e4e4e1c66ceee0ecf8ba9abf84d46dd}
+      \strng{bibnamehash}{2e4e4e1c66ceee0ecf8ba9abf84d46dd}
+      \strng{authorbibnamehash}{2e4e4e1c66ceee0ecf8ba9abf84d46dd}
+      \strng{authornamehash}{2e4e4e1c66ceee0ecf8ba9abf84d46dd}
+      \strng{authorfullhash}{2e4e4e1c66ceee0ecf8ba9abf84d46dd}
+      \strng{authorfullhashraw}{2e4e4e1c66ceee0ecf8ba9abf84d46dd}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{La ciudad de Dios}
+      \field{year}{2007}
+      \true{nocite}
+    \endentry
+    \entry{hume_investigacion}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8fd91102ac431dcdcc4641419cdfb8f0}{%
+           family={Hume},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Madrid}%
+      }
+      \list{publisher}{1}{%
+        {Alianza}%
+      }
+      \strng{namehash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{fullhash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{fullhashraw}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{bibnamehash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{authorbibnamehash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{authornamehash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{authorfullhash}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \strng{authorfullhashraw}{8fd91102ac431dcdcc4641419cdfb8f0}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Investigación sobre el entendimiento humano}
+      \field{year}{2004}
+      \true{nocite}
+    \endentry
+    \entry{plato_theaetetus}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b972a24786e1f16c351d24c95896e968}{%
+           family={Platón},
+           familyi={P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Madrid}%
+      }
+      \list{publisher}{1}{%
+        {Gredos}%
+      }
+      \strng{namehash}{b972a24786e1f16c351d24c95896e968}
+      \strng{fullhash}{b972a24786e1f16c351d24c95896e968}
+      \strng{fullhashraw}{b972a24786e1f16c351d24c95896e968}
+      \strng{bibnamehash}{b972a24786e1f16c351d24c95896e968}
+      \strng{authorbibnamehash}{b972a24786e1f16c351d24c95896e968}
+      \strng{authornamehash}{b972a24786e1f16c351d24c95896e968}
+      \strng{authorfullhash}{b972a24786e1f16c351d24c95896e968}
+      \strng{authorfullhashraw}{b972a24786e1f16c351d24c95896e968}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Teeteto}
+      \field{year}{2003}
+      \true{nocite}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

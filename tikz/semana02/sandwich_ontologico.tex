@@ -1,0 +1,17 @@
+% Archivo: tikz/sandwich_ontologico.tex
+\begin{tikzpicture}[
+    >={Stealth[scale=1.2]}, 
+    node distance=1.5cm
+]
+
+    % Estrato Superior
+    \node[cajaLarga, minimum width=7.5cm, font=\bfseries] (y) {Estrato Deóntico ($\VarY$)\\Símbolos, Acuerdos, \ActoDeclarativo{}s};
+    
+    % Estrato Inferior
+    \node[cajaLarga, minimum width=7.5cm, thick] (x) [below=1.5cm of y] {Estrato Material ($\VarX$)\\Coacción física, Armas, Prisiones};
+
+    % Conexión
+    \draw[->, thick] (x) -- (y) 
+        node[midway, right=0.2cm, font=\scriptsize, text width=5cm] {Garantiza la operatividad del sistema mediante la amenaza latente de violencia legítima.};
+
+\end{tikzpicture}

@@ -1,0 +1,34 @@
+\documentclass[12pt,twoside]{book}
+
+\input{preambulo}
+\input{macros}
+
+\title{Filosofía de la Cultura\\\large Manuscrito vivo}
+\author{Roberto Sánchez}
+\date{\today}
+
+\begin{document}
+
+\hypersetup{pageanchor=false}
+\maketitle
+\thispagestyle{empty}
+\clearpage
+
+\frontmatter
+\tableofcontents
+\clearpage
+\hypersetup{pageanchor=true}
+
+\mainmatter
+
+\part{ANTROPOLOGÍA DE LA TÉCNICA}
+\input{semanas/semana01.tex}
+\input{semanas/semana02.tex}
+\input{semanas/semana03.tex}
+%\input{semanas/semana04}
+
+\backmatter
+\nocite{*}
+%\printbibliography
+
+\end{document}

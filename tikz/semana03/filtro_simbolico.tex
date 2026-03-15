@@ -1,0 +1,23 @@
+% Archivo: tikz/filtro_simbolico.tex
+\begin{tikzpicture}[
+    >={Stealth[scale=1.2]}, 
+    node distance=1.5cm
+]
+
+    % Nivel 1: Lo Real (Caos)
+    \node[cajaLarga, font=\bfseries] (r) {Nivel 1: \AbsolutismoRealidad\\\scriptsize($\VarR$ : Caos sensorial en bruto)};
+    
+    % Nivel 2: El Filtro (Sistema Simbólico)
+    \node[cajaLarga, thick, dashed] (s) [below=1.2cm of r] {\textbf{Nivel 2: \FormasSimbolicas{}}\\($\VarS$ : Lenguaje, Mito, Ciencia)};
+    
+    % Nivel 3: Percepción
+    \node[cajaLarga, font=\bfseries] (p) [below=1.5cm of s] {Nivel 3: Mundo Ordenado\\($\VarP$ : Percepción consciente)};
+
+    % Flechas y Operadores
+    \draw[->, ultra thick] (r) -- (s) 
+        node[midway, right=0.1cm, font=\tiny, text width=4cm] {Impacto traumático /\\Pánico inmanente};
+        
+    \draw[->, thick] (s) -- (p) 
+        node[midway, right=0.1cm, font=\tiny, text width=4cm] {Operador de transformación:\\$\VarP = \VarS(\VarR)$};
+
+\end{tikzpicture}

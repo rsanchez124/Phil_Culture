@@ -1,0 +1,46 @@
+% Archivo: tikz/sistema_dinamico_antropogenesis.tex
+\begin{tikzpicture}[
+    >={Stealth[scale=1.2]}, 
+    node distance=2.0cm
+]
+
+    % ==========================
+    % ESTADO 0: ANIMAL
+    % ==========================
+    \node[font=\bfseries] (est0) {Estado 0: Estructura Animal (Cíclica)};
+    
+    \node[draw, rectangle, rounded corners=2pt, minimum width=1.5cm, minimum height=0.8cm] (O_animal) [below=0.8cm of est0, xshift=-3cm] {$O$};
+    \node[draw, rectangle, rounded corners=2pt, minimum width=1.5cm, minimum height=0.8cm] (M_animal) [below=0.8cm of est0, xshift=3cm] {$M$};
+    
+    \draw[<->, thick] (O_animal) -- (M_animal) 
+        node[midway, above, font=\scriptsize] {Relación in-mediata};
+
+    % Separador
+    \draw[loosely dashed] (-4, -2.5) -- (4, -2.5);
+
+    % ==========================
+    % ESTADO 1: HUMANO
+    % ==========================
+    \node[font=\bfseries] (est1) [below=3.5cm of est0] {Estado 1: Estructura Humana (Antropogénesis)};
+    
+    % Triángulo relacional base
+    \node[draw, rectangle, rounded corners=2pt, minimum width=1.5cm, minimum height=0.8cm] (O_t) [below=1.2cm of est1, xshift=-2.5cm] {$O_t$};
+    \node[draw, rectangle, rounded corners=2pt, minimum width=1.5cm, minimum height=0.8cm] (M_humano) [below=1.2cm of est1, xshift=2.5cm] {$M$};
+    \node[caja, text width=2.5cm, minimum height=0.8cm] (T_t) [below=2.8cm of est1] {Técnica ($T_t$)};
+    
+    % Estado futuro
+    \node[draw, rectangle, rounded corners=2pt, minimum width=1.5cm, minimum height=0.8cm] (O_t1) [below=1.8cm of T_t, xshift=-2.5cm] {$O_{t+1}$};
+
+    % Conexiones del triángulo
+    \draw[<->, thick] (O_t) -- (T_t);
+    \draw[<->, thick] (T_t) -- (M_humano);
+    \draw[<->, loosely dashed] (O_t) -- (M_humano) 
+        node[midway, above, font=\footnotesize] {Mediación};
+
+    % Iteración temporal
+    \draw[->, thick] (O_t) -- (O_t1) 
+        node[midway, left, font=\footnotesize] {Produce};
+    \draw[->, thick] (T_t) -- (O_t1) 
+        node[midway, right=0.3cm, font=\footnotesize] {Iteración: $f(O_t, T_t)$};
+
+\end{tikzpicture}

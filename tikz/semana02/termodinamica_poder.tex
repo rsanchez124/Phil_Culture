@@ -1,0 +1,25 @@
+% Archivo: tikz/termodinamica_poder.tex
+\begin{tikzpicture}[
+    >={Stealth[scale=1.2]}, 
+    node distance=1.5cm
+]
+
+    \node[font=\bfseries, align=center] (titulo) {Dinámica: $\VarY(t) \propto \Legit + \Viol \ge \ConstK$};
+    
+    % Estado Hegemónico
+    \node[cajaLarga] (heg) [below=0.6cm of titulo] {\textbf{Estado Hegemónico}\\Alta $\Legit \implies$ Baja $\Viol$};
+    
+    % Estado Crítico
+    \node[cajaLarga] (crit) [below=1.5cm of heg] {\textbf{Estado Crítico}\\Baja $\Legit \implies$ Alta $\Viol$};
+    
+    % Colapso Ontológico
+    \node[cajaLarga, dashed, thick] (colapso) [below=1.5cm of crit] {\textbf{Colapso Ontológico}\\Costo($\Viol$) $> \Edisp \implies \VarY \to \VarX$};
+
+    % Flechas de transición
+    \draw[->, thick] (heg) -- (crit) 
+        node[midway, right=0.2cm, font=\tiny, text width=4cm] {Desfase Base/Superestructura\\($B_t \neq S_t \implies$ Cae $\Legit$)};
+        
+    \draw[->, thick] (crit) -- (colapso) 
+        node[midway, right=0.2cm, font=\tiny, text width=4cm] {Ruptura termodinámica\\(Insostenibilidad material)};
+
+\end{tikzpicture}

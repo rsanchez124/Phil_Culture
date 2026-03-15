@@ -1,0 +1,26 @@
+% Archivo: tikz/violencia_simbolica.tex
+\begin{tikzpicture}[
+    >={Stealth[scale=1.2]}, 
+    node distance=1.5cm
+]
+
+    % 1. Emisión del Poder
+    \node[cajaLarga, font=\bfseries] (poder) {1. Hegemonía Estructural\\(Control del \RegimenVerdad)};
+    
+    % 2. Ejercicio de Violencia
+    \node[cajaLarga, thick] (violencia) [below=1.2cm of poder] {2. \ViolenciaSimbolica\\(Imposición de categorías y valores)};
+    
+    % 3. Complicidad
+    \node[cajaLarga] (habitus) [below=1.2cm of violencia] {3. Complicidad del Dominado\\(Internalización como \Habitus)};
+
+    % Flujo descendente
+    \draw[->, thick] (poder) -- (violencia) 
+        node[midway, right, font=\footnotesize] {Produce};
+    \draw[->, thick] (violencia) -- (habitus) 
+        node[midway, right, font=\footnotesize] {Naturaliza};
+
+    % Bucle de retroalimentación ascendente
+    \draw[->, loosely dashed, thick] (habitus.190) -- ++(-1.5,0) |- (poder.170) 
+        node[pos=0.25, left, font=\footnotesize, text width=2.5cm, align=right] {Legitima y reproduce\\el orden original};
+
+\end{tikzpicture}

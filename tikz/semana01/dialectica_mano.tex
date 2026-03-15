@@ -1,0 +1,28 @@
+% Archivo: tikz/dialectica_mano.tex
+\begin{tikzpicture}[
+    >={Stealth[scale=1.2]}, 
+    node distance=1cm and 1.5cm
+]
+
+    % Columna Izquierda: IDEALISMO
+    \node (idealismo) [font=\bfseries, align=center] {Modelo Idealista\\(Tradición Cartesiana)};
+    \node[caja] (alma) [below=0.8cm of idealismo] {Intelecto /\\ \textit{Res Cogitans}};
+    \node[caja] (herramienta1) [below=1.5cm of alma] {Invención de\\ la Herramienta};
+    
+    \draw[->, thick] (alma) -- (herramienta1) 
+        node[midway, right, font=\footnotesize, align=left] {Causalidad\\ descendente};
+
+    % Columna Derecha: MATERIALISMO
+    \node (materialismo) [right=3.5cm of idealismo, font=\bfseries, align=center] {Modelo Materialista\\(Engels)};
+    
+    \node[caja, minimum height=0.6cm] (biped) [below=0.8cm of materialismo] {Bipedestación};
+    \node[caja, minimum height=0.6cm] (mano) [below=0.4cm of biped] {Mano libre};
+    \node[caja, minimum height=0.6cm] (trabajo) [below=0.4cm of mano] {Trabajo};
+    \node[caja, minimum height=0.6cm] (cerebro) [below=0.4cm of trabajo] {Cerebro};
+
+    \draw[->, thick] (biped) -- (mano);
+    \draw[->, thick] (mano) -- (trabajo);
+    \draw[->, thick] (trabajo) -- (cerebro) 
+        node[midway, right, font=\footnotesize] {Presión};
+
+\end{tikzpicture}

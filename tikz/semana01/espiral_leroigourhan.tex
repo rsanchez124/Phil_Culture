@@ -1,0 +1,19 @@
+% Archivo: tikz/espiral_leroigourhan.tex
+\begin{tikzpicture}[
+    >={Stealth[scale=1.2]}
+]
+
+    \node[caja, text width=3.5cm] (pies) at (0, 0) {1. Liberación\\ de los pies};
+    \node[caja, text width=3.5cm] (mano) at (3.5, -2) {2. Liberación\\ de la mano};
+    \node[caja, text width=3.5cm] (cara) at (0, -4) {3. Retroceso\\ craneofacial};
+    \node[caja, text width=3.5cm] (laringe) at (-3.5, -2) {4. Descenso\\ laringe};
+
+    \draw[->, thick, bend left=15] (pies) to (mano);
+    \draw[->, thick, bend left=15] (mano) to (cara);
+    \draw[->, thick, bend left=15] (cara) to (laringe);
+    
+    % Feedback loop con curva ajustada
+    \draw[->, thick, dashed, bend left=15] (laringe) to 
+        node[midway, above left, font=\footnotesize, align=center] {Retroalimentación\\ sistémica} (pies);
+
+\end{tikzpicture}

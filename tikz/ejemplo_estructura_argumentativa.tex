@@ -1,0 +1,10 @@
+\begin{adjustbox}{max width=\linewidth}
+\begin{tikzpicture}[node distance=10mm, >=Latex]
+\node[cajaLarga] (p1) {Premisa 1};
+\node[cajaLarga, below=of p1] (p2) {Premisa 2};
+\node[cajaLarga, below=of p2] (c) {Conclusión};
+
+\draw[flecha] (p1) -- (p2);
+\draw[flecha] (p2) -- (c);
+\end{tikzpicture}
+\end{adjustbox}

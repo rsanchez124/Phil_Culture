@@ -1,0 +1,30 @@
+﻿name: Build LaTeX PDF
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Compile main.tex
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: main.tex
+          texlive_version: 2025
+          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: manuscrito-pdf
+          path: main.pdf

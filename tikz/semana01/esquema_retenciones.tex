@@ -1,0 +1,39 @@
+% Archivo: tikz/esquema_retenciones.tex
+\begin{tikzpicture}[
+    >={Stealth[scale=1.2]}, 
+    font=\scriptsize,
+    node distance=2.5cm
+]
+
+  % Eje de tiempo (Base)
+  \draw[->, thick, gray] (0,0) -- (10,0) node[right, text=black] {\textbf{Tiempo}};
+  \node[below, text=gray] at (1.5,0) {Pasado};
+  \node[below, text=gray] at (6.5,0) {Ahora};
+
+  % R2: Retención secundaria (recuerdo)
+  \node[draw, circle, thick, fill=gray!10, minimum size=1.2cm, align=center] (R2) at (1.2, 2.5) {\textbf{R2}};
+  \node[align=center] at (1.2, 3.6) {Retención secundaria\\(Recuerdo / $\mEpi$)};
+
+  % R1: Retención primaria (continuidad del ahora)
+  \node[draw, circle, thick, fill=gray!20, minimum size=1.2cm, align=center] (R1) at (6.5, 2.5) {\textbf{R1}};
+  \node[align=center] at (6.5, 3.6) {Retención primaria\\(Conciencia en acto)};
+
+  % R3: Retención terciaria (cultura / soporte técnico)
+  \node[draw, thick, rounded corners, fill=gray!5, minimum width=4.5cm, minimum height=1.2cm, align=center]
+    (R3) at (6.5, -2) {\textbf{R3: Retención terciaria ($\mTec$)}\\Cultura / Soporte Técnico};
+  \node[align=center] at (6.5, -3.2) {\tiny (Lenguaje, libros, \textit{smartphones}, IA)};
+
+  % Flechas horizontales R1 <-> R2 (Bucle biológico)
+  \draw[->, thick] (R1) to[bend left=20] node[below] {\tiny se sedimenta en} (R2);
+  \draw[->, thick] (R2) to[bend left=20] node[above] {\tiny proyecta / filtra el} (R1);
+
+  % Flechas verticales con R3 (Bucle tecnológico)
+  \draw[->, ultra thick, dashed] (R1.south) -- node[left, align=right] {\tiny exterioriza\\ \tiny (herramienta)} (R3.north);
+  
+  \draw[->, ultra thick] (R3.east) to[bend right=40] node[right, align=left] {\tiny condiciona el\\ \tiny \textit{ahora} biológico} (R1.east);
+
+  % Nota explicativa epistémica
+  \node[draw, dotted, align=left, text width=3.5cm, fill=white] at (11, 2.5)
+  {\tiny \textbf{Axioma de Stiegler:}\\ No existe un \textit{ahora} puro.\\ El presente se experimenta siempre a través del filtro ortopédico de R3.};
+
+\end{tikzpicture}

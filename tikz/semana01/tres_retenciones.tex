@@ -1,0 +1,19 @@
+% Archivo: tikz/tres_retenciones.tex
+\begin{tikzpicture}[
+    >={Stealth[scale=1.2]}, 
+    node distance=1.2cm
+]
+
+    \node[cajaLarga] (r1) {\textbf{Retención Primaria (R1)}\\ Percepción inmediata};
+    
+    \node[cajaLarga] (r2) [below=of r1] {\textbf{Retención Secundaria (R2)}\\ Memoria neuronal biológica};
+    \node[right=0.2cm of r2, font=\footnotesize, text width=3.2cm] (limite2) {$\rightarrow$ Límite: Finitud.\\ Muere con el sujeto.};
+    
+    \node[cajaLarga, thick] (r3) [below=1.5cm of r2] {\textbf{Retención Terciaria (R3)}\\ Memoria técnica exteriorizada};
+    \node[right=0.2cm of r3, font=\footnotesize, text width=3.2cm] (limite3) {$\rightarrow$ Acumulación infinita.\\ (Cultura)};
+
+    \draw[->, thick] (r1) -- (r2);
+    \draw[->, thick] (r2) -- (r3) 
+        node[midway, right, font=\footnotesize] {Epifilogénesis};
+
+\end{tikzpicture}

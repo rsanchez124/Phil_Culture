@@ -1,0 +1,27 @@
+% Archivo: tikz/termodinamica_angustia.tex
+\begin{tikzpicture}[
+    >={Stealth[scale=1.2]},
+    domain=0.5:6,
+    samples=100
+]
+
+    % Ejes
+    \draw[->, thick] (0,0) -- (6.5,0) node[right, font=\footnotesize] {$\|\VarS\|$ (Densidad Simbólica)};
+    \draw[->, thick] (0,0) -- (0,4.5) node[above, font=\footnotesize] {$\VarA$ (Angustia / Entropía psíquica)};
+
+    % Curva asintótica A = 1/S
+    \draw[ultra thick] plot (\x, {2/\x});
+
+    % Ecuación central
+    \node[font=\footnotesize, fill=white, inner sep=2pt] at (3.5, 3) {$\VarA \propto \frac{\text{Incertidumbre}(\VarR)}{\|\VarS\|}$};
+
+    % Zonas de estado
+    % Estado Crítico
+    \draw[loosely dashed] (1, 2) -- (1, 0) node[below, font=\scriptsize, align=center] {Estado\\Crítico};
+    \node[font=\scriptsize, text width=2cm, align=left] at (1.8, 3.8) {Nihilismo\\(Pánico)};
+
+    % Estado de Estabilidad
+    \draw[loosely dashed] (5, 0.4) -- (5, 0) node[below, font=\scriptsize, align=center] {Estado\\Mítico};
+    \node[font=\scriptsize, text width=2cm, align=right] at (6, 1.2) {Estabilidad\\(Cosmos)};
+
+\end{tikzpicture}

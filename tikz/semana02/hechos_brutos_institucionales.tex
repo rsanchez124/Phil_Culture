@@ -1,0 +1,19 @@
+% Archivo: tikz/hechos_brutos_institucionales.tex
+\begin{tikzpicture}[
+    >={Stealth[scale=1.2]}, 
+    node distance=1.5cm
+]
+
+    % Piso 2 (Arriba)
+    \node[cajaLarga, font=\bfseries] (piso2) {Piso 2: Realidad Social\\(\HechosInstitucionales)};
+    \node[left=0.3cm of piso2, font=\tiny, text width=3.5cm, align=right] (desc2) {Dependiente de la\\intencionalidad colectiva};
+    
+    % Piso 1 (Abajo)
+    \node[cajaLarga] (piso1) [below=1.8cm of piso2] {Piso 1: Realidad Física\\(\HechosBrutos)};
+    \node[left=0.3cm of piso1, font=\tiny, text width=3.5cm, align=right] (desc1) {Independiente del\\observador};
+
+    % Conexión y Ecuación
+    \draw[->, thick] (piso1) -- (piso2) 
+        node[midway, right, font=\tiny, text width=4.5cm] {Imposición de \FuncionEstatus\\($\VarX \text{ cuenta como } \VarY \text{ en } \VarC$)};
+
+\end{tikzpicture}

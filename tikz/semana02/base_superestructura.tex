@@ -1,0 +1,21 @@
+% Archivo: tikz/base_superestructura.tex
+\begin{tikzpicture}[
+    >={Stealth[scale=1.2]}, 
+    node distance=1.8cm
+]
+
+    % Superestructura
+    \node[cajaLarga, font=\bfseries] (sup) {\Superestructura\ ($S_t$)\\(Instituciones, Leyes, Cultura)};
+    
+    % Base Material
+    \node[cajaLarga, thick] (base) [below=of sup] {\BaseMaterial\ ($B_t$)\\(Tecnología, Fuerzas productivas)};
+
+    % Flecha ascendente (Determinación material)
+    \draw[->, ultra thick] (base.10) -- (sup.350) 
+        node[midway, right, font=\tiny, text width=3.5cm] {Determina / Condiciona\\(Presión evolutiva)};
+        
+    % Flecha descendente (Legitimación ideológica)
+    \draw[->, loosely dashed, thick] (sup.190) -- (base.170) 
+        node[midway, left, font=\tiny, align=right] {Legitima\\(\Habitus)};
+
+\end{tikzpicture}

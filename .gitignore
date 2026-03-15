@@ -1,0 +1,30 @@
+﻿build/
+
+# LaTeX temporary and generated files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.xdv
+
+# Local/editor files
+*.swp
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# Generated PDF (tracked only if you explicitly want releases in-repo)
+main.pdf
